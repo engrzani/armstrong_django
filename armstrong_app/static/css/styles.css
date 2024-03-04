@@ -1,0 +1,206 @@
+/* static/css/styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffd700; /* Change to your desired hover color */
+}
+/* static/css/styles.css */
+
+/* Navigation Bar Styles */
+.navbar {
+    background-color: #343a40; /* Navbar background color */
+}
+
+.navbar-brand {
+    font-size: 1.5rem; /* Navbar brand font size */
+}
+
+.navbar-toggler-icon {
+    background-color: #fff; /* Navbar toggler icon color */
+}
+
+.navbar-nav a {
+    color: #fff; /* Navbar links color */
+    margin: 0 15px; /* Space between navbar links */
+}
+
+.navbar-nav a:hover {
+    color: #007bff; /* Navbar links color on hover */
+}
+
+.navbar-toggler {
+    border-color: #fff; /* Border color of the navbar toggler button */
+}
+
+/* Adjustments for mobile responsiveness */
+@media (max-width: 767px) {
+    .navbar-nav {
+        text-align: center; /* Center-align navbar links on small screens */
+        margin-top: 10px; /* Add space at the top on small screens */
+    }
+
+    .navbar-toggler {
+        margin-top: 10px; /* Add space at the top of the toggler button on small screens */
+    }
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.login-btn,
+.signup-btn {
+    margin-left: 15px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login-btn {
+    background-color: #4caf50; /* Green color */
+    color: #fff;
+}
+
+.login-btn:hover {
+    background-color: #45a049;
+}
+
+.signup-btn {
+    background-color: #2196F3; /* Blue color */
+    color: #fff;
+}
+
+.signup-btn:hover {
+    background-color: #0e87e6;
+}
+@media only screen and (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .auth-buttons {
+        margin-top: 15px;
+    }
+}
+/* Add or modify styles in styles.css */
+body {
+    background-color: #f8f9fa;
+ }
+ 
+ .carousel-item img {
+    object-fit: cover;
+    height: 70vh; /* Adjust the height as needed */
+ }
+ 
+ .container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+
+/* static/css/styles.css */
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    padding-top: 10px; /* Adjust the top padding to match your navbar height */
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Carousel Styles */
+.carousel-item img {
+    object-fit: cover;
+    height: 70vh; /* Adjust the height as needed */
+}
+
+/* Form Styles */
+form {
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Result Styles */
+.result-message {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.text-success {
+    color: #28a745;
+}
+
+.text-danger {
+    color: #dc3545;
+}

@@ -1,0 +1,47 @@
+<!-- templates/search_armstrong.html -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css">
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+
+
+{% extends 'base.html' %}
+
+{% block title %}Search Armstrong{% endblock %}
+
+{% load static %} 
+
+{% block content %}
+   <div class="container mt-4">
+       <h1 class="text-center mb-4">Search Armstrong Numbers</h1>
+
+       -- Search Armstrong Form --
+       <form method="post" action="{% url 'search_armstrong' %}">
+           {% csrf_token %}
+           <label for="min_number">Minimum Number:</label>
+           <input type="text" name="min_number" id="min_number" required>
+
+           <label for="max_number">Maximum Number:</label>
+           <input type="text" name="max_number" id="max_number" required>
+
+           <button type="submit">Search Armstrong Numbers</button>
+       </form>
+
+       <!-- Display search results -->
+       {% if armstrong_numbers %}
+           <div class="result-message mt-4">
+               <p>Armstrong numbers in the specified range:</p>
+               <ul>
+                   {% for number in armstrong_numbers %}
+                       <li>{{ number }}</li>
+                   {% endfor %}
+               </ul>
+           </div>
+       {% endif %}
+   </div>
+{% endblock %}
+

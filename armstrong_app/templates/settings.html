@@ -1,0 +1,25 @@
+<!-- templates/settings.html -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css">
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+
+
+{% extends 'base.html' %}
+
+{% block title %}Settings{% endblock %}
+{% load static %} 
+
+{% block content %}
+    <h1>Settings</h1>
+    <!-- Add user settings form and error handling messages -->
+    <form method="post" action="{% url 'settings' %}">
+        {% csrf_token %}
+        <!-- Add form fields here -->
+        <input type="submit" value="Save Changes">
+    </form>
+{% endblock %}
